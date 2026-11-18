@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>香港迪士尼公主奇遇之旅</title>
+<link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fffaf3;--card:#fffdf9;--ink:#5b4a56;--sub:#9a8a95;--line:#f0dfe0;--pink:#ffc6d9;--pink2:#ff9fbf;--blue:#cfe8f7;--blue2:#8cc5e8;--mint:#d3f1e1;--lav:#e5dcf7;--yel:#fff0b8;--shadow:0 8px 24px rgba(255,159,191,.18);
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2b2433;--card:#352d3f;--ink:#f6e9ef;--sub:#c3b2c0;--line:#4b4056;--pink:#7a4a63;--blue:#3d5670;--mint:#3b5a52;--lav:#52467a;--yel:#6b5f3a;--shadow:none}}
+:root[data-theme="dark"]{--bg:#2b2433;--card:#352d3f;--ink:#f6e9ef;--sub:#c3b2c0;--line:#4b4056;--pink:#7a4a63;--blue:#3d5670;--mint:#3b5a52;--lav:#52467a;--yel:#6b5f3a;--shadow:none}
+html{scroll-behavior:smooth;scroll-padding-top:calc(64px + env(safe-area-inset-top,0px))}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Huninn','Noto Sans TC','PingFang TC','Microsoft JhengHei',sans-serif;line-height:1.7;
+background-image:radial-gradient(var(--line) 1px,transparent 1px);background-size:22px 22px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--bg);z-index:60}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1.5px dashed var(--line)}
+nav .in{max-width:960px;margin:auto;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;gap:8px}
+nav b{font-size:15px;white-space:nowrap}
+nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0;overflow-x:auto}
+nav a{color:var(--ink);text-decoration:none;font-size:13px;padding:5px 11px;border-radius:99px;white-space:nowrap}
+nav a:hover{background:var(--pink)}
+main{max-width:960px;margin:auto;padding:0 16px 60px}
+.hero{margin-top:18px;border-radius:32px;overflow:hidden;position:relative;background:linear-gradient(180deg,#bfe0f5 0%,#e9d9f7 55%,#ffd6e6 100%);border:2px solid #fff;box-shadow:var(--shadow);text-align:center;color:#5b4a56}
+.hero svg{display:block;width:100%;height:auto}
+.hero .txt{padding:6px 20px 28px;margin-top:-6px}
+.hero small{letter-spacing:.3em;font-size:12px}
+.hero h1{margin:6px 0 8px;font-size:clamp(26px,6.5vw,46px);line-height:1.25;font-weight:400}
+.date{display:inline-block;background:#fffdf9;border:1.5px dashed #ff9fbf;border-radius:99px;padding:3px 16px;font-size:14px}
+.hero p{margin:12px auto 0;max-width:520px;font-size:14px}
+.cd{display:flex;justify-content:center;gap:10px;margin-top:16px}
+.cd div{background:rgba(255,255,255,.85);border-radius:18px;padding:8px 12px;min-width:64px}
+.cd b{display:block;font-size:24px;line-height:1.2}.cd span{font-size:11px;color:#9a8a95}
+section{margin-top:44px}
+h2{font-weight:400;font-size:22px;margin:0 0 16px;display:flex;align-items:center;gap:10px}
+h2::after{content:"";flex:1;border-top:1.5px dashed var(--line)}
+h2 i{font-style:normal;background:var(--pink);border-radius:12px;padding:0 10px;font-size:13px}
+.card{background:var(--card);border:1.5px solid var(--line);border-radius:24px;padding:18px;box-shadow:var(--shadow)}
+.grid{display:grid;gap:14px;grid-template-columns:1fr}
+@media(min-width:700px){.grid.two{grid-template-columns:1fr 1fr}}
+.flight{position:relative;overflow:hidden}
+.flight::before{content:"";position:absolute;left:0;top:0;bottom:0;width:8px;background:repeating-linear-gradient(var(--pink2) 0 8px,var(--blue2) 8px 16px)}
+.flight .top{display:flex;justify-content:space-between;font-size:12px;color:var(--sub);padding-left:10px}
+.route{display:flex;align-items:center;justify-content:space-between;padding:10px 0 4px 10px}
+.route b{font-size:28px;display:block;line-height:1.1;font-weight:400}.route span{font-size:12px;color:var(--sub)}
+.route .mid{flex:1;text-align:center;color:var(--pink2);border-bottom:2px dotted var(--pink2);margin:0 10px 18px;font-size:18px;height:14px;line-height:22px}
+.days{display:flex;gap:8px;overflow-x:auto;padding:4px 2px 12px}
+.days button{flex:1;min-width:76px;font:inherit;color:var(--ink);background:var(--card);border:1.5px solid var(--line);border-radius:20px;padding:8px 6px;cursor:pointer;line-height:1.3}
+.days button small{display:block;font-size:11px;color:var(--sub)}
+.days button.on{background:var(--pink);border-color:var(--pink2);box-shadow:var(--shadow)}
+.days button.on small{color:var(--ink)}
+.dh{margin:6px 4px 16px}.dh h3{margin:0;font-weight:400;font-size:19px}.dh p{margin:0;font-size:13px;color:var(--sub)}
+.tl{position:relative;margin-left:8px;padding-left:22px;border-left:2px dotted var(--pink2)}
+.it{position:relative;margin-bottom:14px}
+.it::before{content:"";position:absolute;left:-30px;top:18px;width:14px;height:14px;border-radius:50%;background:var(--card);border:3px solid var(--pink2)}
+.it.must::before{background:var(--pink2);box-shadow:0 0 0 4px var(--pink)}
+.it .card{padding:12px 16px;border-radius:20px}
+.tm{font-size:13px;color:var(--pink2);letter-spacing:.05em}
+.it h4{margin:0;font-weight:400;font-size:16px;display:flex;flex-wrap:wrap;align-items:center;gap:6px}
+.it p{margin:3px 0 0;font-size:13px;color:var(--sub)}
+.tag{font-size:11px;border-radius:99px;padding:0 9px;color:#5b4a56}
+.t-taxi{background:var(--pink)}.t-fly{background:var(--blue)}.t-walk{background:var(--mint)}.t-bus{background:var(--lav)}.t-eat{background:var(--yel)}
+.dark-fix{color:inherit}
+.badge{font-size:11px;background:var(--pink2);color:#fff;border-radius:8px;padding:0 8px;transform:rotate(-3deg)}
+.note{background:var(--blue);border-radius:18px;padding:10px 14px;font-size:13px;margin:4px 0 14px;color:var(--ink)}
+.chk{list-style:none;margin:0;padding:0}
+.chk li{display:flex;align-items:center;gap:10px;padding:9px 4px;border-bottom:1px dashed var(--line);cursor:pointer}
+.chk li:last-child{border:0}
+.chk .bx{width:22px;height:22px;border-radius:8px;border:2px solid var(--pink2);flex:none;display:grid;place-items:center;color:#fff;font-size:13px}
+.chk li.done .bx{background:var(--pink2)}.chk li.done span{text-decoration:line-through;color:var(--sub)}
+.bar{height:8px;background:var(--line);border-radius:9px;margin-bottom:8px;overflow:hidden}.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--pink2),var(--blue2));transition:width .3s}
+.hotel h4{margin:0;font-weight:400;font-size:17px}.hotel p{margin:4px 0;font-size:13px;color:var(--sub)}
+.hotel .n{display:inline-block;font-size:12px;background:var(--lav);border-radius:99px;padding:0 10px;color:var(--ink)}
+footer{text-align:center;color:var(--sub);font-size:12px;margin-top:50px}
+</style>
+</head>
+<body>
+<nav><div class="in"><b>🏰 公主奇遇手帳</b><ul>
+<li><a href="#top">首頁</a></li><li><a href="#flight">航班</a></li><li><a href="#plan">行程</a></li><li><a href="#todo">清單</a></li><li><a href="#stay">住宿</a></li></ul></div></nav>
+<main id="top">
+<header class="hero">
+<svg viewBox="0 0 600 330" role="img" aria-label="迪士尼城堡與煙火插圖">
+<defs><radialGradient id="g" cx="50%" cy="50%"><stop offset="0" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+<g fill="#fff" opacity=".85"><ellipse cx="90" cy="70" rx="48" ry="16"/><ellipse cx="120" cy="60" rx="30" ry="16"/><ellipse cx="500" cy="120" rx="52" ry="15"/><ellipse cx="470" cy="110" rx="28" ry="14"/></g>
+<g stroke-linecap="round" stroke-width="3" fill="none">
+<g stroke="#ff9fbf"><path d="M130 100v-30M130 100l22-22M130 100l30 0M130 100l22 22M130 100l-22-22M130 100l-30 0M130 100l-22 22M130 100v30"/></g>
+<g stroke="#8cc5e8"><path d="M470 70v-34M470 70l26-26M470 70l34 0M470 70l26 26M470 70l-26-26M470 70l-34 0M470 70l-26 26M470 70v34"/></g>
+<g stroke="#ffd966"><path d="M300 50v-24M300 50l17-17M300 50l24 0M300 50l17 17M300 50l-17-17M300 50l-24 0M300 50l-17 17M300 50v24"/></g></g>
+<g fill="#ffd966"><circle cx="60" cy="150" r="3"/><circle cx="540" cy="170" r="3"/><circle cx="210" cy="40" r="3"/><circle cx="395" cy="30" r="3"/><circle cx="560" cy="60" r="2.5"/></g>
+<path d="M0 290c100-24 200-24 300-8s200 16 300-6v54H0z" fill="#d3f1e1"/>
+<g stroke="#fff" stroke-width="2.5" stroke-linejoin="round">
+<rect x="170" y="218" width="260" height="72" rx="6" fill="#fff4f8"/>
+<rect x="140" y="238" width="40" height="52" fill="#ffe3ee"/><path d="M135 240l25-44 25 44z" fill="#8cc5e8"/>
+<rect x="420" y="238" width="40" height="52" fill="#ffe3ee"/><path d="M415 240l25-44 25 44z" fill="#8cc5e8"/>
+<rect x="194" y="186" width="36" height="104" fill="#fff"/><path d="M188 188l24-64 24 64z" fill="#ffb3cf"/>
+<rect x="370" y="186" width="36" height="104" fill="#fff"/><path d="M364 188l24-64 24 64z" fill="#ffb3cf"/>
+<rect x="235" y="166" width="30" height="124" fill="#fff4f8"/><path d="M229 168l21-54 21 54z" fill="#8cc5e8"/>
+<rect x="335" y="166" width="30" height="124" fill="#fff4f8"/><path d="M329 168l21-54 21 54z" fill="#8cc5e8"/>
+<rect x="272" y="130" width="56" height="160" fill="#fff"/>
+<rect x="266" y="126" width="68" height="8" rx="3" fill="#ffd966"/>
+<path d="M268 128l32-92 32 92z" fill="#ff9fbf"/>
+<path d="M282 290v-36a18 18 0 0136 0v36z" fill="#cfe8f7"/>
+<path d="M140 292c40-8 80-8 120-2h80c40-6 80-6 120 2v-6H140z" fill="#ffe3ee"/></g>
+<path d="M300 36v-22" stroke="#fff" stroke-width="2.5"/><path d="M300 14l20 7-20 7z" fill="#ffd966"/>
+<g fill="#ffd966"><circle cx="212" cy="122" r="4"/><circle cx="388" cy="122" r="4"/><circle cx="250" cy="112" r="4"/><circle cx="350" cy="112" r="4"/><circle cx="160" cy="194" r="3.5"/><circle cx="440" cy="194" r="3.5"/>
+<rect x="296" y="150" width="8" height="14" rx="4"/><rect x="296" y="185" width="8" height="14" rx="4"/><rect x="296" y="220" width="8" height="14" rx="4"/>
+<rect x="208" y="205" width="8" height="14" rx="4"/><rect x="384" y="205" width="8" height="14" rx="4"/><rect x="246" y="190" width="8" height="14" rx="4"/><rect x="346" y="190" width="8" height="14" rx="4"/>
+<rect x="156" y="256" width="8" height="12" rx="4"/><rect x="436" y="256" width="8" height="12" rx="4"/><rect x="208" y="245" width="8" height="12" rx="4"/><rect x="384" y="245" width="8" height="12" rx="4"/><rect x="246" y="235" width="8" height="12" rx="4"/><rect x="346" y="235" width="8" height="12" rx="4"/></g>
+<g fill="#fff" opacity=".9"><circle cx="300" cy="272" r="2"/><circle cx="110" cy="270" r="2.5"/><circle cx="490" cy="268" r="2.5"/></g>
+</svg>
+<div class="txt"><small>HONG KONG DISNEYLAND · 4 DAYS 3 NIGHTS</small>
+<h1>香港迪士尼<br>公主奇遇之旅</h1>
+<span class="date">2026.11.26 — 2026.11.29</span>
+<p>四天三夜，從城堡煙火、魔雪奇緣到東涌購物與機場伴手禮，把最閃亮的回憶收進這本旅行手帳。</p>
+<div class="cd" id="cd"></div></div>
+</header>
+
+<section id="flight"><h2>航班 <i>FLIGHT</i></h2>
+<div class="grid two">
+<div class="card flight"><div class="top"><span>去程 · 11/26（四）</span><span>BR867</span></div>
+<div class="route"><div><b>09:50</b><span>桃園 TPE</span></div><div class="mid">✈</div><div style="text-align:right"><b>11:50</b><span>香港 HKG</span></div></div>
+<div style="padding-left:10px;font-size:12px;color:var(--sub)">約 07:30 抵達桃園機場</div></div>
+<div class="card flight"><div class="top"><span>回程 · 11/29（日）</span><span>BR870</span></div>
+<div class="route"><div><b>15:30</b><span>香港 HKG</span></div><div class="mid">✈</div><div style="text-align:right"><b>17:10</b><span>桃園 TPE</span></div></div>
+<div style="padding-left:10px;font-size:12px;color:var(--sub)">約 13:00 抵達機場，採買伴手禮</div></div>
+</div></section>
+
+<section id="plan"><h2>每日行程 <i>PLAN</i></h2>
+<div class="days" id="days"></div><div id="day"></div></section>
+
+<section id="todo"><h2>待辦清單 <i>TO-DO</i></h2>
+<div class="card"><div class="bar"><i id="bar"></i></div><div id="pc" style="font-size:12px;color:var(--sub);margin-bottom:6px"></div><ul class="chk" id="chk"></ul></div></section>
+
+<section id="stay"><h2>住宿資訊 <i>HOTEL</i></h2>
+<div class="grid two">
+<div class="card hotel"><span class="n">11/26 – 11/28 · 2 晚</span><h4>🏰 迪士尼探索家度假酒店</h4><p>Disney Explorers Lodge</p><p>11/26 約 13:00 計程車抵達 Check-in（車程約 30 分鐘）；11/28 11:00 退房。</p></div>
+<div class="card hotel"><span class="n">11/28 – 11/29 · 1 晚</span><h4>🛍️ 香港東涌世茂喜來登酒店</h4><p>Sheraton Hong Kong Tung Chung Hotel</p><p>有接駁車往返東薈城與東涌站；11/29 09:00 早餐後退房，接駁車往機場每 60 分鐘一班。</p></div>
+</div></section>
+<footer>♡ 祝旅途平安，一路閃閃發光 ♡</footer>
+</main>
+<script>
+var D=[
+{d:"11/26",w:"四",t:"Day 1：開啟迪士尼奇遇",s:"桃園 → 香港 → 樂園",n:"",it:[
+["約 07:30","抵達桃園機場","辦理登機手續","fly"],
+["09:50 – 11:50","BR867 飛往香港","桃園起飛，11:50 抵達香港","fly"],
+["13:00","搭計程車前往飯店 Check-in","迪士尼探索家度假酒店，車程約半小時","taxi"],
+["約 15:00","進入迪士尼樂園","欣賞午間遊行，感受樂園氛圍","walk"],
+["16:00","大冒險家餐廳晚餐","使用預購餐券享用半自助晚餐，並領取煙火指定觀賞專區手環","eat"],
+["20:30 – 21:00","「迪士尼星夢光影之旅」煙火秀","於指定專區尊榮觀賞城堡夜間光影與煙火盛宴","walk",1]]},
+{d:"11/27",w:"五",t:"Day 2：沉浸迪士尼 煙火盛宴",s:"全日樂園",n:"全日餐飲：使用 3 大 2 小「三合一餐券」（含園內午餐、晚餐及爆米花／冰棒點心）。",it:[
+["08:00 – 10:00","星航圖咖啡廳早餐","在飯店享用早餐","eat"],
+["10:00","進入樂園續玩","全日遊玩，重點設施如下","walk"],
+["全日","魔雪奇緣世界","魔雪奇幻之旅、雪嶺滑雪橇（超人氣）","walk",1],
+["全日","經典設施與表演","獅子王慶典劇院、探險河穿梭探險、迷離莊園（迷離大宅）、灰熊山谷礦車","walk",1],
+["午、晚餐","三合一餐券","園內午餐、晚餐及爆米花／冰棒點心","eat"],
+["晚間","夜間奇想煙火","觀賞「迪士尼星夢光影之旅：星空派對」煙火秀","walk",1],
+["住宿","迪士尼探索家度假酒店","回飯店休息","walk"]]},
+{d:"11/28",w:"六",t:"Day 3：Outlet 購物與名店蛋塔",s:"換飯店 · 東涌購物",n:"東薈城 Outlet 營業至 23:50，飯店有接駁車往返飯店與東涌站。",it:[
+["08:00","雲龍軒早餐","享用港式早餐","eat"],
+["11:00","退房，前往東涌","搭計程車約 20 分鐘至「香港東涌世茂喜來登酒店」","taxi"],
+["午後","東薈城 Outlet 購物狂歡","搭飯店接駁車往返東涌站，盡情血拼","bus",1],
+["美食首選","7 樓「食代館」","匯集米其林推薦品牌與道地小吃","eat"],
+["必嚐甜點","Bakehouse 酸種蛋塔","招牌「酸種蛋塔」與「牛角包」；08:00–21:00，東薈城名店倉地下 G19 號舖","eat",1],
+["18:00","悅見晚餐","喜來登酒店內餐廳","eat"]]},
+{d:"11/29",w:"日",t:"Day 4：悠閒早晨 ‧ 機場伴手禮",s:"香港 → 桃園",n:"酒店接駁車往返香港國際機場：每 60 分鐘一班，車程約 10–15 分鐘。",it:[
+["09:00","喜來登酒店早餐後退房","享用豐盛早餐","eat"],
+["約 13:00","接駁車抵達機場","開啟最後的伴手禮採買","bus"],
+["推薦清單","機場伴手禮","皇玥蝴蝶酥、曲奇四重奏笑臉曲奇、奇華熊貓禮盒、曲奇阿嬸夾心曲奇","walk",1],
+["機場午餐","都爹利會館／翠華餐廳","都爹利會館（米其林叉燒）或翠華餐廳（奶油豬）","eat"],
+["15:30 – 17:10","BR870 賦歸","搭機返台，約 17:10 抵達桃園，帶著滿滿回憶結束旅程","fly"]]}];
+var TG={taxi:"計程車",fly:"飛機",walk:"步行／園區",bus:"接駁車",eat:"用餐"};
+var dEl=document.getElementById("days"),vEl=document.getElementById("day"),cur=0;
+function show(i){cur=i;
+dEl.innerHTML=D.map(function(x,k){return '<button class="'+(k==i?'on':'')+'" onclick="show('+k+')">Day '+(k+1)+'<small>'+x.d+'（'+x.w+'）</small></button>'}).join("");
+var x=D[i];
+vEl.innerHTML='<div class="dh"><h3>'+x.t+'</h3><p>'+x.d+'（'+x.w+'）· '+x.s+'</p></div>'+(x.n?'<div class="note">💡 '+x.n+'</div>':'')+
+'<div class="tl">'+x.it.map(function(r){return '<div class="it'+(r[4]?' must':'')+'"><div class="card"><div class="tm">'+r[0]+'</div><h4>'+r[1]+' <span class="tag t-'+r[3]+'">'+TG[r[3]]+'</span>'+(r[4]?'<span class="badge">必去</span>':'')+'</h4><p>'+r[2]+'</p></div></div>'}).join("")+'</div>'}
+show(0);
+// countdown
+function cd(){var ms=new Date(2026,10,26,9,50)-new Date(),el=document.getElementById("cd");
+if(ms<=0){el.innerHTML='<div><b>✈</b><span>旅程進行中</span></div>';return}
+var d=Math.floor(ms/864e5),h=Math.floor(ms%864e5/36e5),m=Math.floor(ms%36e5/6e4);
+el.innerHTML='<div><b>'+d+'</b><span>天</span></div><div><b>'+h+'</b><span>小時</span></div><div><b>'+m+'</b><span>分鐘</span></div>'}
+cd();setInterval(cd,30000);
+// checklist
+var L=["護照（效期 6 個月以上）","機票／電子登機證","迪士尼門票與三合一餐券","大冒險家餐廳半自助預購券","飯店訂房確認（2 間飯店）","港幣現金／信用卡","網卡或漫遊方案","行動電源與充電線","舒適好走的鞋子","外套（11 月晚間較涼）","伴手禮預算清單"];
+var st={};try{st=JSON.parse(localStorage.getItem("hkchk")||"{}")}catch(e){}
+function draw(){var n=0;document.getElementById("chk").innerHTML=L.map(function(t,i){if(st[i])n++;return '<li class="'+(st[i]?'done':'')+'" onclick="tg('+i+')"><div class="bx">'+(st[i]?'✓':'')+'</div><span>'+t+'</span></li>'}).join("");
+document.getElementById("bar").style.width=Math.round(n/L.length*100)+"%";document.getElementById("pc").textContent="已完成 "+n+" / "+L.length}
+function tg(i){st[i]=!st[i];try{localStorage.setItem("hkchk",JSON.stringify(st))}catch(e){}draw()}
+draw();
+</script>
+</body>
+</html>
